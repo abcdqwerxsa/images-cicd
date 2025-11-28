@@ -3,11 +3,6 @@ import { WorkflowConfig, OutputType, PagesConfig } from '../types';
 export const generateYaml = (config: WorkflowConfig): string => {
   const isOciLocal = config.outputType === OutputType.OCI_LOCAL;
 
-  // Format build args
-  const buildArgsString = config.buildArgs
-    .map(arg => `${arg.key}=${arg.value}`)
-    .join('\n            ');
-
   const platformsString = config.platforms.join(',');
 
   const header = `name: Docker Build
