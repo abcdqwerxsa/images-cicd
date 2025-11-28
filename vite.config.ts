@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: './', // Ensures assets are linked relatively for GitHub Pages
+  define: {
+    // Polyfill process.env to avoid runtime crashes in browser
+    'process.env': {}
+  }
 });
