@@ -1,0 +1,5 @@
+{
+  "name": "ActionForge: Docker Workflow Generator",
+  "description": "A professional tool to generate complex GitHub Action workflows for multi-platform Docker/OCI builds, featuring AI-powered Dockerfile generation and advanced build arguments.",
+  "requestFramePermissions": []
+}
