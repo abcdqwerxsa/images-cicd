@@ -26,7 +26,7 @@ export const generateDockerfile = async (description: string): Promise<string> =
       contents: prompt,
     });
 
-    return response.text.trim();
+    return response.text ? response.text.trim() : '';
   } catch (error) {
     console.error("Gemini API Error:", error);
     throw new Error("Failed to generate Dockerfile. Please try again.");
